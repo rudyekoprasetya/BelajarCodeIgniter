@@ -1,4 +1,6 @@
-
+<head>
+	<title>belajar Code Igniter</title>
+</head>
 <h2><?php echo $isi; ?></h2>
 <?php echo form_open('pengurus/edit_submit'); ?>
 

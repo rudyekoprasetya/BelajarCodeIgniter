@@ -4,6 +4,9 @@
 <?php echo form_open('pengurus/simpan'); ?>
 <?php echo form_open('admin/simpan'); ?>
 <html>
+<head>
+	<title>belajar Code Igniter</title>
+</head>
 <body>
 <form>
 <table border="10">
@@ -38,10 +41,10 @@
 foreach($data->result_array()as $row){
 ?>
 <tr>
-	<td><?php echo $row['id']; ?></td>
+	<td><?php echo $row['id_admin']; ?></td>
 	<td><?php echo $row['username']; ?></td>
-	<td><?php echo "@$#%@##$@%"; ?></td>
-	<th><?php echo anchor("admin/edit_admin/$row[id]","EDIT");?> | <?php echo anchor("admin/delete/$row[id]","DELETE");?></th>
+	<td><?php echo "************"; ?></td>
+	<th><?php echo anchor("admin/edit_admin/$row[id_admin]","EDIT");?> | <?php echo anchor("admin/delete/$row[id_admin]","DELETE");?></th>
 </tr>
 <?php } ?>
 </table>

@@ -2,6 +2,9 @@
 <div align="right"> <?php echo anchor("admin","[Data Admin]");?></div></td></tr> 
 <div align="right"> <?php echo anchor("login/logout","[Logout]");?></div></td></tr>
 <html>
+<head>
+	<title>belajar Code Igniter</title>
+</head>
 <body>
 <?php echo form_open('pengurus/simpan'); ?>
 <table border="10">

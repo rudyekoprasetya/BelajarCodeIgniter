@@ -6,8 +6,7 @@ class Pengurus extends CI_controller{
 	$this->load->helper(array('url','form'));
 	$this->load->model("model_pengurus");
 	$this->load->library('session');
-	//if(!$this->session->userdata('logged_in')) {redirect
-	//('login','refresh');}
+	if(!$this->session->userdata('logged_in')) {redirect ('login','refresh');}
 }
 function index(){
 	$data['judul']="Database dalam CI";

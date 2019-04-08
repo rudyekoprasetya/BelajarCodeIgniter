@@ -9,21 +9,21 @@ function __construct(){
 		$data=$this->db->query("SELECT * FROM admin");
 		return $data;
 	}
-	function simpan($id,$username,$password) {
-		$query="INSERT INTO admin VALUES ('$id','$username','$password')";
+	function simpan($id_admin,$username,$password) {
+		$query="INSERT INTO admin VALUES ('$id_admin','$username','$password')";
 		$this->db->query($query);
 	}
-	function edit_admin($id) {
-		$data=$this->db->query("SELECT * FROM admin WHERE id='$id'");
+	function edit_admin($id_admin) {
+		$data=$this->db->query("SELECT * FROM admin WHERE id_admin='$id_admin'");
 		return $data;
 	}
-	function update($id,$username,$password) {
+	function update($id_admin,$username,$password) {
 		$query="UPDATE admin SET
-		username='$username',password='$password' WHERE id='$id'";
+		username='$username',password='$password' WHERE id_admin='$id_admin'";
 		$this->db->query($query);
 	}
-	function delete($id) {
-		$data=$this->db->query("DELETE FROM admin WHERE id='$id'");
+	function delete($id_admin) {
+		$data=$this->db->query("DELETE FROM admin WHERE id_admin='$id_admin'");
 		return $data;
 	}
 	

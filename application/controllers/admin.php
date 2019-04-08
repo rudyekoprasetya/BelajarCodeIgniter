@@ -20,7 +20,7 @@ class admin extends CI_controller {
 	$id=$this->input->post('id',true);
 	$username=$this->input->post('username',true);
 	$password=$this->input->post('password',true);
-	$this->model_admin->simpan($id,$username,$password);
+	$this->model_admin->simpan($id,$username,md5($password));
 	redirect ('admin');
 	}
 	
@@ -44,7 +44,7 @@ class admin extends CI_controller {
 	$id=$this->input->post('id',true);
 	$username=$this->input->post('username',true);
 	$password=$this->input->post('password',true);
-	$this->model_admin->update($id,$username,$password);
+	$this->model_admin->update($id,$username,md5($password));
 	redirect ('admin');
 	}
 	
