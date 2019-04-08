@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 03:46 PM
+-- Generation Time: Apr 08, 2019 at 03:55 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -51,7 +51,7 @@ CREATE TABLE `pengurus` (
   `id` int(11) NOT NULL,
   `nama` char(80) NOT NULL,
   `alamat` text NOT NULL,
-  `gender` enum('pria','wanita') NOT NULL,
+  `gender` enum('L','P') NOT NULL,
   `gaji` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,17 +60,17 @@ CREATE TABLE `pengurus` (
 --
 
 INSERT INTO `pengurus` (`id`, `nama`, `alamat`, `gender`, `gaji`) VALUES
-(2, 'Adimas Sastra Nugraha', 'Kweden Tegalan', 'pria', 15000),
-(5, 'Jane Doe', 'Florida', 'wanita', 1000000),
-(6, 'Minerva Hooper', 'Rookserve', 'wanita', 1000000),
-(7, 'Sage Rodriguez', 'Mispool', 'pria', 1000000),
-(8, 'Philip Chaney', 'Nestle', 'pria', 100000000),
-(9, 'Morris Boe', 'North Dakota', 'pria', 19230000),
-(10, 'Doris Greene', 'Sologne', 'pria', 18000000),
-(11, 'Mason Porter', 'Nessu', 'pria', 1200000),
-(12, 'Alden Chen', 'Chaos', 'pria', 139000000),
-(13, 'Colton Hodges', 'Texas', 'pria', 19000000),
-(14, 'Baru', 'mana aja', 'pria', 10000);
+(2, 'Adimas Sastra Nugraha', 'Kweden Tegalan', 'L', 15000),
+(5, 'Jane Doe', 'Florida', 'L', 1000000),
+(6, 'Minerva Hooper', 'Rookserve', 'L', 1000000),
+(7, 'Sage Rodriguez', 'Mispool', 'L', 1000000),
+(8, 'Philip Chaney', 'Nestle', 'L', 100000000),
+(9, 'Morris Boe', 'North Dakota', 'L', 19230000),
+(10, 'Doris Greene', 'Sologne', 'P', 18000000),
+(11, 'Mason Porter', 'Nessu', 'L', 1200000),
+(12, 'Alden Chen', 'Chaos', 'L', 139000000),
+(13, 'Colton Hodges', 'Texas', 'L', 19000000),
+(14, 'Baru', 'mana aja', 'L', 10000);
 
 --
 -- Indexes for dumped tables

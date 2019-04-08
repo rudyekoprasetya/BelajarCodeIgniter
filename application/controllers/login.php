@@ -4,7 +4,7 @@ class login extends CI_controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper(array('url','form'));
-		$this->load->model("model_user");
+		$this->load->model("Model_user");
 		$this->load->library('session');
 	}
 	function index() {
@@ -14,7 +14,7 @@ class login extends CI_controller {
 		//memasukan variable dari form login
 		$username=$this->input->post('username',TRUE);
 		$password=$this->input->post('password',TRUE);
-		$cek=$this->model_user->cek_user($username,md5($password));
+		$cek=$this->Model_user->cek_user($username,md5($password));
 		if($cek==TRUE){ //cek ke database apakah ada
 			$data=array('username'=>$username,'logged_in'=>TRUE);
 			$this->session->set_userdata($data);
